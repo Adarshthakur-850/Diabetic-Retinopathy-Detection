@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+tensorflow
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+fastapi
+python-multipart
+streamlit
+uvicorn
+=======
+tensorflow
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+fastapi
+python-multipart
+streamlit
+uvicorn
+>>>>>>> bfc7beb115d588c39eae3b48e183112d5fff549a
