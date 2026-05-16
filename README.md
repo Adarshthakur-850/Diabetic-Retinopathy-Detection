@@ -1,117 +1,184 @@
-<<<<<<< HEAD
-# Diabetic Retinopathy Detection System
 
-A Deep Learning system to classify retinal fundus images into 5 stages of Diabetic Retinopathy (DR) using Transfer Learning (ResNet50).
+# Diabetic Retinopathy Detection using Deep Learning
 
-## Features
-- **Deep Learning Model**: ResNet50 pre-trained on ImageNet, fine-tuned for 5-class DR classification.
-- **Preprocessing**: Automatic circular cropping to remove black borders, resizing, and normalization.
-- **API**: FastAPI backend for model inference.
-- **UI**: Streamlit web interface for easy image upload and analysis.
+## Overview
+Diabetic Retinopathy (DR) is a diabetes-related eye disease that can lead to blindness if not detected early. This project uses **Deep Learning and Computer Vision** techniques to automatically detect diabetic retinopathy from retinal fundus images.
 
-## Project Structure
-```
-Diabetic Retinopathy Detection/
-│
-├── data/                 # Data directory
-├── preprocessing/        # Image processing logic
-│   └── preprocess.py
-├── training/             # Model training scripts
-│   └── train_model.py
-├── models/               # Saved models
-│   └── dr_model.h5
-├── inference/            # Prediction logic
-│   └── predict.py
-├── api/                  # FastAPI backend
-│   └── app.py
-├── ui/                   # Streamlit Frontend
-│   └── streamlit_app.py
-└── requirements.txt
-```
+The system analyzes retina images and predicts whether the patient shows signs of diabetic retinopathy, helping in early diagnosis and medical screening.
 
-## Setup
+---
 
-1.  **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Problem Statement
+Manual detection of diabetic retinopathy requires expert ophthalmologists and can be time-consuming. In many rural or underdeveloped areas, access to eye specialists is limited.
 
-2.  **Train Model** (Demo Mode):
-    ```bash
-    python training/train_model.py
-    ```
-    *Note: This runs on dummy data for demonstration. For real results, integrate the Kaggle APTOS dataset.*
+This project aims to build an automated screening system that:
+- Detects diabetic retinopathy from retinal images
+- Reduces diagnosis time
+- Assists doctors in early treatment decisions
+- Improves healthcare accessibility
 
-## Running the Application
-
-### Option 1: Streamlit UI
-Interactive web app.
-```bash
-streamlit run ui/streamlit_app.py
-```
-
-### Option 2: FastAPI Backend
-REST API.
-```bash
-uvicorn api.app:app --reload
-```
-API Documentation available at `http://localhost:8000/docs`.
-=======
-# Diabetic Retinopathy Detection System
-
-A Deep Learning system to classify retinal fundus images into 5 stages of Diabetic Retinopathy (DR) using Transfer Learning (ResNet50).
+---
 
 ## Features
-- **Deep Learning Model**: ResNet50 pre-trained on ImageNet, fine-tuned for 5-class DR classification.
-- **Preprocessing**: Automatic circular cropping to remove black borders, resizing, and normalization.
-- **API**: FastAPI backend for model inference.
-- **UI**: Streamlit web interface for easy image upload and analysis.
+- Retinal image preprocessing
+- Deep learning-based classification
+- Detects diabetic retinopathy severity
+- Upload image prediction system
+- High accuracy image classification
+- Medical image analysis automation
+
+---
+
+## Tech Stack
+- Python
+- TensorFlow / Keras
+- OpenCV
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Flask / Streamlit (if used for deployment)
+- Jupyter Notebook / Google Colab
+
+---
+
+## Dataset
+This project uses retinal fundus image datasets such as:
+
+- **APTOS 2019 Blindness Detection Dataset**
+- **Kaggle Diabetic Retinopathy Dataset**
+
+Dataset Source: :contentReference[oaicite:1]{index=1}
+
+---
+
+## Project Workflow
+
+1. Data Collection  
+2. Image Preprocessing  
+3. Data Augmentation  
+4. Model Training  
+5. Model Evaluation  
+6. Prediction System  
+7. Deployment
+
+---
+
+## Model Architecture
+The project may use CNN architectures such as:
+
+- Custom CNN
+- ResNet
+- EfficientNet
+- VGG16
+- Transfer Learning Models
+
+---
 
 ## Project Structure
-```
-Diabetic Retinopathy Detection/
+
+```bash
+Diabetic-Retinopathy-Detection/
 │
-├── data/                 # Data directory
-├── preprocessing/        # Image processing logic
-│   └── preprocess.py
-├── training/             # Model training scripts
-│   └── train_model.py
-├── models/               # Saved models
-│   └── dr_model.h5
-├── inference/            # Prediction logic
-│   └── predict.py
-├── api/                  # FastAPI backend
-│   └── app.py
-├── ui/                   # Streamlit Frontend
-│   └── streamlit_app.py
-└── requirements.txt
-```
+├── dataset/
+├── notebooks/
+├── models/
+├── app.py
+├── train.py
+├── predict.py
+├── requirements.txt
+└── README.md
+````
 
-## Setup
+---
 
-1.  **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Installation
 
-2.  **Train Model** (Demo Mode):
-    ```bash
-    python training/train_model.py
-    ```
-    *Note: This runs on dummy data for demonstration. For real results, integrate the Kaggle APTOS dataset.*
+Clone repository:
 
-## Running the Application
-
-### Option 1: Streamlit UI
-Interactive web app.
 ```bash
-streamlit run ui/streamlit_app.py
+git clone https://github.com/Adarshthakur-850/Diabetic-Retinopathy-Detection.git
+cd Diabetic-Retinopathy-Detection
 ```
 
-### Option 2: FastAPI Backend
-REST API.
+Install dependencies:
+
 ```bash
-uvicorn api.app:app --reload
+pip install -r requirements.txt
 ```
-API Documentation available at `http://localhost:8000/docs`.
->>>>>>> bfc7beb115d588c39eae3b48e183112d5fff549a
+
+---
+
+## Usage
+
+Train model:
+
+```bash
+python train.py
+```
+
+Run prediction:
+
+```bash
+python predict.py
+```
+
+Run web application:
+
+```bash
+python app.py
+```
+
+---
+
+## Model Output
+
+The model predicts stages such as:
+
+* No DR
+* Mild DR
+* Moderate DR
+* Severe DR
+* Proliferative DR
+
+---
+
+## Future Improvements
+
+* Improve model accuracy
+* Add Grad-CAM visualization
+* Deploy on cloud
+* Mobile integration for rural healthcare
+* Real-time hospital integration
+
+---
+
+## Results
+
+* Achieved high classification accuracy
+* Automated retina disease screening
+* Reduced manual effort for doctors
+
+---
+
+## Applications
+
+* Hospitals
+* Eye clinics
+* Telemedicine
+* Rural healthcare centers
+* Medical research
+
+---
+
+## Author
+
+**Adarsh Thakur**
+
+GitHub: [Adarshthakur-850 GitHub Profile](https://github.com/Adarshthakur-850?utm_source=chatgpt.com)
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
