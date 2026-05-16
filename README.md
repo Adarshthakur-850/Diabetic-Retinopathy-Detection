@@ -175,7 +175,7 @@ The model predicts stages such as:
 
 **Adarsh Thakur**
 
-GitHub: [Adarshthakur-850 GitHub Profile](https://github.com/Adarshthakur-850?utm_source=chatgpt.com)
+GitHub: [Adarshthakur-850](https://github.com/Adarshthakur-850?utm_source=chatgpt.com)
 
 ---
 
